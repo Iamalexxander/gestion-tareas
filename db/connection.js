@@ -44,10 +44,7 @@ async function setupDatabase() {
         
     } catch (error) {
         console.error('❌ Error:', error.message);
-    } finally {
-        await pool.end();
-        process.exit(0);
-    }
+    } 
 }
 
 setupDatabase();
