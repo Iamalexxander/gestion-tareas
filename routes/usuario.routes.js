@@ -11,7 +11,7 @@ router.get('/',(req, res)=>{
 //Ruta para obtener todos los usuarios
 router.get('/usuarios', async (req, res)=>{
     try {
-        const result = await db.query('Select * From usuario');
+        const result = await db.query('Select *From usuario');
         res.status(200).json(result.rows);
     } catch (error) {
         res.status(500).json({"mensaje":"Erro al obtener usuarios"});
